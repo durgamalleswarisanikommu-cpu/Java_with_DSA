@@ -1,0 +1,201 @@
+# Java Basics Interview Questions
+
+1. What is Java and how does it work?
+Java is a high-level, object-oriented programming language released by Sun Microsystems in 1995, 
+it's built on a simple but powerful philosophy: "Write Once, Run Anywhere" (WORA).
+
+2. Why is Java called a programming language?
+Java is called a programming language because it provides a set of rules, syntax, and 
+keywords that programmers use to write instructions (programs) for a computer.
+
+## 3. What are the features of Java?
+
+- Simple
+- Object-Oriented
+- Platform Independent
+- Portable
+- Secure
+- Robust
+- Multithreaded
+- High Performance
+
+## 4. Why is Java platform independent?
+Java is platform independent because Java compiler converts source code into bytecode, and 
+this bytecode runs on any operating system through JVM.
+Example:
+A Java program written on Windows can run on Linux or Mac without rewriting the code.
+
+## 5. What is JVM?
+JVM stands for Java Virtual Machine. It is a part of JRE that executes Java bytecode and 
+converts it into machine code, allowing Java programs to run on different platforms
+
+## 6. What is JRE?
+JRE stands for Java Runtime Environment. It is used to run Java applications and contains JVM 
+along with required libraries and supporting files.
+
+## 7. What is JDK?
+JDK stands for Java Development Kit. It is used to develop Java applications and contains JRE, JVM, 
+and development tools like the Java compiler.
+
+8. Difference between JDK, JRE, and JVM?
+| JDK                               | JRE                                | JVM                                 |
+| --------------------------------- | ---------------------------------- | ----------------------------------- |
+| **Java Development Kit**          | **Java Runtime Environment**       | **Java Virtual Machine**            |
+| Used to **develop Java programs** | Used to **run Java programs**      | Used to **execute Java bytecode**   |
+| Contains JRE + development tools  | Contains JVM + Java libraries      | Part of JRE                         |
+| Used by Java developers           | Used by users to run applications  | Runs inside JRE                     |
+| Example tools: `javac`, debugger  | Provides environment for execution | Converts bytecode into machine code |
+
+
+9. What is bytecode in Java?
+Bytecode is the intermediate code generated after compiling a Java program. JVM executes this bytecode.
+
+10. What is a class?
+A class is a blueprint used to create objects.
+Example:
+
+class Student
+{
+}
+
+## 11. What is an object?
+An object is an instance of a class that contains data and methods.
+
+
+## 12. What is the main method in Java?
+The main method is the starting point of execution of a Java program. 
+JVM calls the main method first to start running the program.
+Syntax:
+public static void main(String args[])
+
+13. Why is the main method static?
+The main method is static because JVM needs to call it without creating an object of the class.
+If the main method was not static, JVM would need to create an object first, 
+but JVM does not know how to create that object before starting the program.
+
+14. What are variables in Java?
+Variables are containers used to store data values.
+Example:
+int age = 20;
+
+15. What are data types in Java?
+Data types define the type of data a variable can store.
+Java has two types of data types:
+
+1. Primitive Data Types
+These are predefined data types in Java.
+There are 8 primitive data types:
+
+byte	
+short	
+int	
+long	
+float	
+double	
+char	
+boolean	
+
+
+2. Non-Primitive Data Types
+These are created by programmers.
+Examples:
+String
+Array
+Class
+Object
+
+16.Difference between Compiler and Interpreter
+Compiler:
+A compiler converts the entire program at once into machine code or intermediate code before execution.
+Example:
+Java
+C
+C++
+
+Interpreter:
+- Executes program line by line
+Example:
+Python
+JavaScript
+
+17. Is Java compiled or interpreted?
+Java is both compiled and interpreted.
+Compilation:
+Java source code (.java) is converted into bytecode (.class) by the Java compiler.
+
+Interpretation:
+The JVM reads the bytecode and executes it using an interpreter.
+
+18. What is garbage collection?
+Garbage collection automatically removes unused objects from memory.
+
+19. What is the difference between == and equals()?
+
+==:
+- Compares memory addresses
+
+equals():
+- Compares actual values
+
+20. What is the difference between C++ and Java?
+
+C++:
+- Supports pointers
+- Platform dependent
+
+Java:
+- No direct pointers
+- Platform independent
+
+21.What are Access Modifiers in Java?
+
+Access modifiers are keywords in Java that control the visibility (access level) of classes, 
+variables, methods, and constructors.
+
+Java has 4 access modifiers:
+
+public
+private
+protected
+default
+
+22. What is constructor?
+A constructor is a special method used to initialize objects.
+It is called automatically when an object is created.
+class Student {
+
+    String name;
+
+    Student() {
+        name = "Ravi";
+    }
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        System.out.println(s.name);
+    }
+}
+
+Explanation:
+
+Student() is a constructor.
+When new Student() is created, the constructor runs automatically.
+It initializes the object.
+
+23. Does Java support multiple inheritance?
+
+No, Java does not support multiple inheritance through classes because it creates ambiguity.
+
+24. What is Method Overloading?
+
+Method overloading is a feature in Java where we create multiple methods with the same name 
+but different parameters (number, type, or order of parameters) in the same class.
+
+25.What is Method Overriding?
+
+Method overriding is a feature in Java where a child class provides a different implementation of a
+method that is already defined in the parent class.
+
+
