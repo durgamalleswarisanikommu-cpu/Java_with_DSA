@@ -1,1 +1,174 @@
 
+# Basics of Java
+
+## Introduction to Java
+
+Java is a high-level, object-oriented, class-based programming language developed by Sun Microsystems in 1995 (now owned by Oracle).
+
+Java is mainly used for developing:
+- Web applications
+- Mobile applications
+- Desktop applications
+- Enterprise applications
+- Software development
+- Big data technologies
+
+
+## Why Java is called a Programming Language?
+
+Java is called a programming language because it provides a set of instructions (code) that humans write to communicate with computers and perform specific tasks.
+
+
+## Features of Java
+
+### 1. Simple
+Java is easy to learn because it removes complex features like pointers and multiple inheritance.
+
+### 2. Object-Oriented
+Java follows OOP concepts:
+- Class
+- Object
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Abstraction
+
+### 3. Platform Independent
+
+Java follows:
+
+"Write Once, Run Anywhere"
+
+Java programs can run on different operating systems because of JVM.
+
+Example:
+
+Java code written in Windows can run on Linux or Mac using JVM.
+
+
+### 4. Portable
+
+Java programs can be transferred from one system to another and run without changes.
+
+
+### 5. Secure
+
+Java provides security features:
+- No direct memory access
+- Bytecode verification
+- Exception handling
+
+
+### 6. Robust
+
+Java is reliable because of:
+- Strong memory management
+- Exception handling
+- Garbage collection
+
+
+### 7. Multithreaded
+
+Java supports executing multiple tasks simultaneously using threads.
+
+Example:
+Downloading a file while playing music.
+
+
+### 8. High Performance
+
+Java uses Just-In-Time (JIT) compiler which improves execution speed.
+
+
+# Java Program Execution Flow
+
+Java program execution happens in the following steps:
+
+1. Write Java code
+
+Example:
+Hello.java
+
+2. Compile the program
+
+Compiler converts Java code into bytecode.
+
+Command:
+javac Hello.java
+
+3. Bytecode is generated
+
+Example:
+Hello.class
+
+4. JVM executes the bytecode
+
+Command:
+java Hello
+
+
+# Structure of Java Program
+
+Example:
+
+class Hello
+{
+    public static void main(String args[])
+    {
+        System.out.println("Hello Java");
+    }
+}
+
+
+Explanation:
+
+class:
+Used to create a class.
+
+main():
+Starting point of Java program execution.
+
+System.out.println():
+Used to print output.
+
+
+# Applications of Java
+
+Java is used in:
+
+1. Android Development
+
+Example:
+Mobile applications
+
+2. Web Development
+
+Example:
+E-commerce websites
+
+3. Enterprise Applications
+
+Example:
+Banking software
+
+4. Game Development
+
+5. Cloud Applications
+
+
+# Advantages of Java
+
+- Easy to learn
+- Platform independent
+- Object-oriented
+- Secure
+- Portable
+- Supports multithreading
+- Large community support
+
+
+# Disadvantages of Java
+
+- Requires more memory
+- Slower compared to low-level languages like C
+- More code compared to some modern languages
