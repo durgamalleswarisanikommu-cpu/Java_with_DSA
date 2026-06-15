@@ -1,0 +1,320 @@
+# Operators in Java - Interview Questions
+
+## 1. What are operators in Java?
+
+Operators are special symbols used to perform operations on variables and values.
+
+Example:
+
++
+-
+*
+/
+
+
+## 2. What are the different types of operators in Java?
+
+Types of operators:
+
+1. Arithmetic Operators
+2. Relational Operators
+3. Logical Operators
+4. Assignment Operators
+5. Unary Operators
+6. Bitwise Operators
+7. Ternary Operator
+
+
+## 3. What is the difference between = and == operators?
+
+= (Assignment Operator):
+- Used to assign a value to a variable.
+
+Example:
+
+int a = 10;
+
+
+== (Relational Operator):
+- Used to compare two values.
+
+Example:
+
+a == b
+
+
+## 4. What is the difference between == and equals()?
+
+==:
+- Compares memory addresses.
+
+equals():
+- Compares actual values of objects.
+
+
+## 5. What are arithmetic operators in Java?
+
+Arithmetic operators perform mathematical operations.
+
+Operators:
+
++
+-
+*
+/
+%
+
+
+## 6. What is modulus (%) operator?
+
+Modulus operator returns the remainder after division.
+
+Example:
+
+10 % 3
+
+Output:
+
+1
+
+
+## 7. What is the difference between / and % operators?
+
+/
+
+Returns quotient.
+
+Example:
+
+10 / 2 = 5
+
+
+%
+
+Returns remainder.
+
+Example:
+
+10 % 3 = 1
+
+
+## 8. What are relational operators?
+
+Relational operators compare two values and return true or false.
+
+Examples:
+
+>
+<
+>=
+<=
+==
+!=
+
+
+## 9. What are logical operators?
+
+Logical operators combine multiple conditions.
+
+Types:
+
+&&  AND
+
+||  OR
+
+!   NOT
+
+
+## 10. Difference between && and & operators?
+
+&&:
+- Logical AND
+- Checks conditions
+- Uses short circuit evaluation
+
+
+&:
+- Bitwise AND
+- Works on binary values
+
+
+## 11. Difference between || and | operators?
+
+||:
+- Logical OR
+- Short circuit operator
+
+
+|:
+- Bitwise OR
+- Works on bits
+
+
+## 12. What is short circuit evaluation?
+
+In logical operators, if the result can be decided from the first condition, the second condition is not executed.
+
+Example:
+
+false && condition
+
+Second condition will not execute.
+
+
+## 13. What are unary operators?
+
+Unary operators work on only one operand.
+
+Operators:
+
+++
+--
+
+Example:
+
+a++
+
+
+## 14. Difference between pre-increment and post-increment?
+
+Pre Increment:
+
+++a
+
+First increases value then uses it.
+
+
+Post Increment:
+
+a++
+
+First uses value then increases.
+
+
+## 15. What is a ternary operator?
+
+Ternary operator is a shortcut for if-else.
+
+Syntax:
+
+condition ? value1 : value2;
+
+
+Example:
+
+result = (a>b) ? a : b;
+
+
+## 16. What are assignment operators?
+
+Assignment operators assign values to variables.
+
+Operators:
+
+=
++=
+-=
+*=
+/=
+
+
+## 17. What are bitwise operators?
+
+Bitwise operators perform operations on binary numbers.
+
+Operators:
+
+&
+|
+^
+~
+<<
+>>
+
+
+## 18. Difference between logical AND and bitwise AND?
+
+Logical AND:
+
+Works with boolean values.
+
+Example:
+
+true && true
+
+
+Bitwise AND:
+
+Works with binary numbers.
+
+Example:
+
+5 & 3
+
+
+## 19. What is operator precedence?
+
+Operator precedence decides the order of evaluation of operators.
+
+Example:
+
+10 + 5 * 2
+
+Multiplication happens first.
+
+
+## 20. Which operator has the highest priority in Java?
+
+Parentheses () have the highest priority.
+
+
+## 21. Can we overload operators in Java?
+
+No, Java does not support operator overloading except the + operator for String concatenation.
+
+
+## 22. Why is + operator special in Java?
+
+The + operator is used for:
+
+1. Addition
+
+Example:
+
+10 + 20
+
+
+2. String concatenation
+
+Example:
+
+"Hello" + "Java"
+
+
+## 23. What is the result of:
+
+int a = 10;
+System.out.println(a++);
+
+Output:
+
+10
+
+Because post increment uses value first.
+
+
+## 24. What is the result of:
+
+int a = 10;
+System.out.println(++a);
+
+Output:
+
+11
+
+Because pre increment increases value first.
+
+
+## 25. Can we use operators with different data types?
+
+Yes, Java performs type conversion automatically when possible.
