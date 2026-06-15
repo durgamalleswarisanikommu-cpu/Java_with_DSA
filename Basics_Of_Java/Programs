@@ -1,0 +1,297 @@
+1. Hello World Program
+
+class HelloWorld
+{
+    public static void main(String args[])
+    {
+        System.out.println("Hello Java");
+    }
+}
+
+
+2. Print User Input
+
+UserInput.java
+
+import java.util.*;
+
+class UserInput
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        String name = sc.nextLine();
+
+        System.out.println("Hello " + name);
+    }
+}
+
+3. Addition of Two Numbers
+
+AddTwoNumbers.java
+
+import java.util.*;
+
+class AddTwoNumbers
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        int sum = a + b;
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+4. Check Even or Odd
+
+EvenOdd.java
+
+import java.util.*;
+
+class EvenOdd
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        if(n % 2 == 0)
+        {
+            System.out.println("Even");
+        }
+        else
+        {
+            System.out.println("Odd");
+        }
+    }
+}
+5. Largest of Two Numbers
+
+LargestNumber.java
+
+import java.util.*;
+
+class LargestNumber
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if(a > b)
+        {
+            System.out.println(a + " is largest");
+        }
+        else
+        {
+            System.out.println(b + " is largest");
+        }
+    }
+}
+6. Swap Two Numbers
+
+SwapNumbers.java
+
+import java.util.*;
+
+class SwapNumbers
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        int temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
+7. Find Factorial
+
+Factorial.java
+
+import java.util.*;
+
+class Factorial
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int fact = 1;
+
+        for(int i=1; i<=n; i++)
+        {
+            fact = fact * i;
+        }
+
+        System.out.println(fact);
+    }
+}
+8. Reverse a Number
+
+ReverseNumber.java
+
+import java.util.*;
+
+class ReverseNumber
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int rev = 0;
+
+        while(n > 0)
+        {
+            int digit = n % 10;
+            rev = rev * 10 + digit;
+            n = n / 10;
+        }
+
+        System.out.println(rev);
+    }
+}
+9. Palindrome Number
+
+PalindromeNumber.java
+
+import java.util.*;
+
+class PalindromeNumber
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int original = n;
+        int rev = 0;
+
+        while(n > 0)
+        {
+            int digit = n % 10;
+            rev = rev * 10 + digit;
+            n = n / 10;
+        }
+
+        if(original == rev)
+        {
+            System.out.println("Palindrome");
+        }
+        else
+        {
+            System.out.println("Not Palindrome");
+        }
+    }
+}
+10. Prime Number
+
+PrimeNumber.java
+
+import java.util.*;
+
+class PrimeNumber
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int count = 0;
+
+        for(int i=1; i<=n; i++)
+        {
+            if(n % i == 0)
+            {
+                count++;
+            }
+        }
+
+        if(count == 2)
+        {
+            System.out.println("Prime");
+        }
+        else
+        {
+            System.out.println("Not Prime");
+        }
+    }
+}
+11. Fibonacci Series
+
+Fibonacci.java
+
+import java.util.*;
+
+class Fibonacci
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int a = 0;
+        int b = 1;
+
+        for(int i=1; i<=n; i++)
+        {
+            System.out.print(a + " ");
+
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+12. Armstrong Number
+
+Armstrong.java
+
+import java.util.*;
+
+class Armstrong
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int original = n;
+        int sum = 0;
+
+        while(n > 0)
+        {
+            int digit = n % 10;
+            sum = sum + (digit * digit * digit);
+            n = n / 10;
+        }
+
+        if(original == sum)
+        {
+            System.out.println("Armstrong");
+        }
+        else
+        {
+            System.out.println("Not Armstrong");
+        }
+    }
+}
+
