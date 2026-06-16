@@ -1,0 +1,276 @@
+1. If-Else Program (Even or Odd)
+
+EvenOdd.java
+
+import java.util.*;
+
+class EvenOdd
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        if(n % 2 == 0)
+        {
+            System.out.println("Even");
+        }
+        else
+        {
+            System.out.println("Odd");
+        }
+    }
+}
+2. Largest of Three Numbers
+
+LargestOfThree.java
+
+import java.util.*;
+
+class LargestOfThree
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        if(a >= b && a >= c)
+        {
+            System.out.println(a + " is largest");
+        }
+        else if(b >= a && b >= c)
+        {
+            System.out.println(b + " is largest");
+        }
+        else
+        {
+            System.out.println(c + " is largest");
+        }
+    }
+}
+3. Grade System (else-if ladder)
+
+GradeSystem.java
+
+import java.util.*;
+
+class GradeSystem
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int marks = sc.nextInt();
+
+        if(marks >= 90)
+        {
+            System.out.println("A Grade");
+        }
+        else if(marks >= 75)
+        {
+            System.out.println("B Grade");
+        }
+        else if(marks >= 50)
+        {
+            System.out.println("C Grade");
+        }
+        else
+        {
+            System.out.println("Fail");
+        }
+    }
+}
+4. Switch Case (Day of Week)
+
+DayOfWeek.java
+
+import java.util.*;
+
+class DayOfWeek
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int day = sc.nextInt();
+
+        switch(day)
+        {
+            case 1:
+                System.out.println("Monday");
+                break;
+
+            case 2:
+                System.out.println("Tuesday");
+                break;
+
+            case 3:
+                System.out.println("Wednesday");
+                break;
+
+            case 4:
+                System.out.println("Thursday");
+                break;
+
+            case 5:
+                System.out.println("Friday");
+                break;
+
+            case 6:
+                System.out.println("Saturday");
+                break;
+
+            case 7:
+                System.out.println("Sunday");
+                break;
+
+            default:
+                System.out.println("Invalid Input");
+        }
+    }
+}
+5. For Loop (Print 1 to N)
+
+PrintNumbers.java
+
+import java.util.*;
+
+class PrintNumbers
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        for(int i = 1; i <= n; i++)
+        {
+            System.out.println(i);
+        }
+    }
+}
+6. Sum of First N Numbers (for loop)
+
+SumOfN.java
+
+import java.util.*;
+
+class SumOfN
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int sum = 0;
+
+        for(int i = 1; i <= n; i++)
+        {
+            sum = sum + i;
+        }
+
+        System.out.println(sum);
+    }
+}
+7. While Loop (Reverse Number)
+
+ReverseNumber.java
+
+import java.util.*;
+
+class ReverseNumber
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int rev = 0;
+
+        while(n > 0)
+        {
+            int digit = n % 10;
+            rev = rev * 10 + digit;
+            n = n / 10;
+        }
+
+        System.out.println(rev);
+    }
+}
+8. Do-While Loop (Menu Example)
+
+MenuProgram.java
+
+import java.util.*;
+
+class MenuProgram
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int choice;
+
+        do
+        {
+            System.out.println("1. Hello");
+            System.out.println("2. Exit");
+            choice = sc.nextInt();
+
+            switch(choice)
+            {
+                case 1:
+                    System.out.println("Hello User");
+                    break;
+
+                case 2:
+                    System.out.println("Exiting...");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice");
+            }
+
+        } while(choice != 2);
+    }
+}
+9. Break Statement Example
+
+BreakExample.java
+
+class BreakExample
+{
+    public static void main(String args[])
+    {
+        for(int i = 1; i <= 10; i++)
+        {
+            if(i == 5)
+            {
+                break;
+            }
+            System.out.println(i);
+        }
+    }
+}
+10. Continue Statement Example
+
+ContinueExample.java
+
+class ContinueExample
+{
+    public static void main(String args[])
+    {
+        for(int i = 1; i <= 10; i++)
+        {
+            if(i == 5)
+            {
+                continue;
+            }
+            System.out.println(i);
+        }
+    }
+}
