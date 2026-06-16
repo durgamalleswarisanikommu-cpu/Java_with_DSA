@@ -34,3 +34,149 @@ public class day2
         }
     }
 }
+
+#3.Factorail of given number
+import java.util.*;
+
+public class day2
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a value:\n");
+        int a=sc.nextInt();
+        int fact=1;
+        for(int i=1;i<=a;i++)
+        {
+          fact=fact*i;
+        }
+        System.out.println("Factorial of a number is:" +fact);
+    }
+}
+
+#4.Spy number : A Spy number is a number where the sum of digits = product of digits.  Ex:123
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        int temp = num;
+
+        int sum = 0;
+        int product = 1;
+
+        while(temp > 0) {
+            int digit = temp % 10;
+
+            sum = sum + digit;
+            product = product * digit;
+
+            temp = temp / 10;
+        }
+
+        if(sum == product) {
+            System.out.println("Spy number");
+        }
+        else {
+            System.out.println("Not a Spy number");
+        }
+
+        sc.close();
+    }
+}
+
+#5.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int square = n * n;
+        int temp = n;
+        int count = 0;
+
+        while(temp > 0) {
+            count++;
+            temp = temp / 10;
+        }
+
+        int last = square % (int)Math.pow(10, count);
+
+        if(last == n) {
+            System.out.println("Automorphic number");
+        }
+        else {
+            System.out.println("Not an Automorphic number");
+        }
+
+        sc.close();
+    }
+}
+
+#6.Magic Number : A Magic Number is a number where:
+
+Repeatedly sum its digits until you get a single digit.
+👉 If the final digit is 1, it is a Magic Number.
+
+import java.util.*;
+
+class Solution {
+    public String isMagic(int n) {
+        
+        while (n > 9) {
+            int sum = 0;
+            
+            while (n > 0) {
+                sum += n % 10;
+                n = n / 10;
+            }
+            
+            n = sum;
+        }
+        
+        if (n == 1) {
+            return "Magic Number";
+        } else {
+            return "Not a Magic Number";
+        }
+    }
+}
+
+#7.Happy Number:
+
+import java.util.*;
+class Main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        HashSet<Integer> set = new HashSet<>();
+
+        while (n != 1 && !set.contains(n)) {
+            set.add(n);
+
+            int sum = 0;
+
+            while (n > 0) {
+                int digit = n % 10;
+                sum += digit * digit;
+                n = n / 10;
+            }
+
+            n = sum;
+        }
+
+        if (n == 1) {
+            System.out.println("Happy Number");
+        } else {
+            System.out.println("Not a Happy Number");
+        }
+    }
+}
