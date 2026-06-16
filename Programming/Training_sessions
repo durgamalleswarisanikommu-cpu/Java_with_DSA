@@ -89,8 +89,8 @@ public class Main {
     }
 }
 
-#5.import java.util.*;
-
+#5. Automorphic Number
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
@@ -123,32 +123,37 @@ public class Main {
 #6.Magic Number : A Magic Number is a number where:
 
 Repeatedly sum its digits until you get a single digit.
-👉 If the final digit is 1, it is a Magic Number.
+👉 If the final digit is 1, it is a Magic Number.Ex:1729
 
 import java.util.*;
 
-class Solution {
-    public String isMagic(int n) {
-        
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
         while (n > 9) {
+
             int sum = 0;
-            
+
             while (n > 0) {
-                sum += n % 10;
+                int digit = n % 10;
+                sum = sum + digit;
                 n = n / 10;
             }
-            
+
             n = sum;
         }
-        
+
         if (n == 1) {
-            return "Magic Number";
+            System.out.println("Magic Number");
         } else {
-            return "Not a Magic Number";
+            System.out.println("Not a Magic Number");
         }
     }
 }
-
 #7.Happy Number:
 
 import java.util.*;
@@ -334,5 +339,391 @@ class Main {
         } else {
             System.out.println("Not a Perfect Square");
         }
+    }
+}
+
+
+15.Perfect Number upto N
+import java.util.*;
+class Main {
+    public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    for (int num = 1; num <= n; num++) {
+    int sum = 0;
+    for (int i = 1; i < num; i++) {
+
+                if (num % i == 0) {
+                    sum = sum + i;
+                }
+            }
+
+            if (sum == num) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+}
+
+16.Palindrome Number:
+A Palindrome Number is a number that remains the same when reversed.
+import java.util.*;
+class palindrome
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int temp=n;
+        int rev=0;
+        
+        while(temp>0)
+        {
+            int digit=temp%10;
+            rev=rev*10+digit;
+            temp=temp/10;
+        }
+        if(n == rev)
+        {
+            System.out.println("Palindrome");
+        }
+        else
+        {
+            System.out.println("Not a palindrome");
+        }
+    }
+}
+
+17.ArmStrong Number: Sum of each digit raised to the power of number of digits is 
+equal to the original number.
+
+Example:
+153
+
+Number of digits = 3
+
+1³ + 5³ + 3³
+= 1 + 125 + 27
+= 153 ✔
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int temp = n;
+        int count = 0;
+
+        // Count number of digits
+        while (temp > 0) {
+            count++;
+            temp = temp / 10;
+        }
+
+        temp = n;
+        int sum = 0;
+
+        // Calculate Armstrong value
+        while (temp > 0) {
+
+            int digit = temp % 10;
+
+            sum = sum + (int)Math.pow(digit, count);
+
+            temp = temp / 10;
+        }
+
+        if (sum == n) {
+            System.out.println("Armstrong Number");
+        } else {
+            System.out.println("Not an Armstrong Number");
+        }
+    }
+}
+
+18.Co-prime Numbers : Two numbers are co-prime if their GCD (Greatest Common Divisor) is 1.
+import java.util.Scanner;
+
+public class CoPrimeNumber {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        int gcd = 1;
+
+        for (int i = 1; i <= a && i <= b; i++) {
+            if (a % i == 0 && b % i == 0) {
+                gcd = i;
+            }
+        }
+
+        if (gcd == 1) {
+            System.out.println(a + " and " + b + " are Co-prime numbers");
+        } else {
+            System.out.println(a + " and " + b + " are not Co-prime numbers");
+        }
+
+        sc.close();
+    }
+}
+
+19.Pronic Numberc: A Pronic number is a number that can be expressed as n × (n+1).
+Example: 6 = 2 × 3, so 6 is a Pronic number.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        boolean isPronic = false;
+
+        for(int i = 0; i <= num; i++) {
+            if(i * (i + 1) == num) {
+                isPronic = true;
+                break;
+            }
+        }
+
+        if(isPronic) {
+            System.out.println("Pronic number");
+        } 
+        else {
+            System.out.println("Not a Pronic number");
+        }
+
+        sc.close();
+    }
+}
+
+#20. Evil Number : An Evil number is a number that has an even number of 1's in its binary representation.
+Example: 9 → Binary = 1001 → two 1's → Evil number
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+
+        int count = 0;
+        int temp = num;
+
+        while(temp > 0) {
+            if(temp % 2 == 1) {
+                count++;
+            }
+            temp = temp / 2;
+        }
+
+        if(count % 2 == 0) {
+            System.out.println("Evil number");
+        }
+        else {
+            System.out.println("Not an Evil number");
+        }
+
+        sc.close();
+    }
+}
+
+#21.Neon Number: A Neon number is a number where the sum of digits of its square is equal to the original number.
+Example: 9² = 81 → 8+1 = 9 → Neon number
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int square = n * n;
+        int sum = 0;
+
+        while(square > 0) {
+            int digit = square % 10;
+            sum = sum + digit;
+            square = square / 10;
+        }
+
+        if(sum == n) {
+            System.out.println("Neon number");
+        }
+        else {
+            System.out.println("Not a Neon number");
+        }
+
+        sc.close();
+    }
+}
+
+#22.Unique Number
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int temp = n;
+        boolean unique = true;
+
+        int[] count = new int[10];
+
+        while (temp > 0) {
+
+            int digit = temp % 10;
+
+            count[digit]++;
+
+            temp = temp / 10;
+        }
+
+        for (int i = 0; i < 10; i++) {
+
+            if (count[i] > 1) {
+                unique = false;
+                break;
+            }
+        }
+
+        if (unique) {
+            System.out.println("Unique Number");
+        } else {
+            System.out.println("Not a Unique Number");
+        }
+    }
+}
+
+#23.Special Two Digit Number : A Special two digit number is a number where the 
+sum of its digits + product of its digits = original number.
+
+Example:
+29 → (2 + 9) + (2 × 9) = 11 + 18 = 29
+So 29 is a Special two digit number.
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int first = n / 10;
+        int second = n % 10;
+
+        int sum = first + second;
+        int product = first * second;
+
+        if(sum + product == n) {
+            System.out.println("Special two digit number");
+        }
+        else {
+            System.out.println("Not a Special two digit number");
+        }
+
+        sc.close();
+    }
+}
+
+#24.Twister Prime Number
+A Twister Prime number is a number where:
+The number is prime
+Its reverse is also prime
+
+import java.util.*;
+public class Main {
+
+    static boolean isPrime(int n) {
+
+        if(n <= 1)
+            return false;
+
+        for(int i = 2; i <= n/2; i++) {
+            if(n % i == 0)
+                return false;
+        }
+
+        return true;
+    }
+
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int temp = n;
+        int reverse = 0;
+
+        while(temp > 0) {
+            int digit = temp % 10;
+            reverse = reverse * 10 + digit;
+            temp = temp / 10;
+        }
+
+        if(isPrime(n) && isPrime(reverse)) {
+            System.out.println("Twister Prime number");
+        }
+        else {
+            System.out.println("Not a Twister Prime number");
+        }
+
+        sc.close();
+    }
+}
+
+#25.Java Program on Twin Prime Number
+Two numbers are called Twin Prime numbers if:
+Both numbers are prime
+Difference between them is 2
+Example:
+(5, 7) → both prime and difference = 2 → Twin Prime
+
+import java.util.*;
+public class Main {
+
+    static boolean isPrime(int n) {
+
+        if(n <= 1)
+            return false;
+
+        for(int i = 2; i <= n/2; i++) {
+
+            if(n % i == 0)
+                return false;
+        }
+
+        return true;
+    }
+
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if(isPrime(a) && isPrime(b) && Math.abs(a-b) == 2) {
+            System.out.println("Twin Prime numbers");
+        }
+        else {
+            System.out.println("Not Twin Prime numbers");
+        }
+
+        sc.close();
     }
 }
