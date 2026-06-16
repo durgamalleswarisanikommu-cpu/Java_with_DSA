@@ -1,0 +1,315 @@
+# Control Structures in Java
+
+## Introduction
+
+Control structures are statements used to control the flow of execution of a Java program.
+
+They decide:
+- Which statement should execute
+- How many times a statement should execute
+- In what order statements should execute
+
+
+# Types of Control Structures in Java
+
+Java provides three main types of control structures:
+
+1. Decision Making Statements
+2. Looping Statements
+3. Jump Statements
+
+
+# 1. Decision Making Statements
+
+Decision making statements execute a block of code based on a condition.
+
+Types:
+
+- if statement
+- if-else statement
+- else-if ladder
+- nested if
+- switch statement
+
+
+## if Statement
+
+The if statement executes code only when the condition is true.
+
+
+Syntax:
+
+if(condition)
+{
+    // statements
+}
+
+
+Example:
+
+```java
+int age = 20;
+
+if(age >= 18)
+{
+    System.out.println("Eligible");
+}
+
+if-else Statement
+
+The if-else statement executes one block when condition is true and another block when condition is false.
+
+Syntax:
+
+if(condition)
+{
+// true block
+}
+else
+{
+// false block
+}
+
+Example:
+
+int num = 5;
+
+if(num % 2 == 0)
+{
+    System.out.println("Even");
+}
+else
+{
+    System.out.println("Odd");
+}
+else-if Ladder
+
+Used when we have multiple conditions.
+
+Syntax:
+
+if(condition1)
+{
+
+}
+else if(condition2)
+{
+
+}
+else
+{
+
+}
+
+Example:
+
+int marks = 80;
+
+if(marks >= 90)
+{
+    System.out.println("A Grade");
+}
+else if(marks >= 60)
+{
+    System.out.println("B Grade");
+}
+else
+{
+    System.out.println("C Grade");
+}
+Nested if
+
+An if statement inside another if statement is called nested if.
+
+Example:
+
+int age = 20;
+
+if(age >= 18)
+{
+    if(age <= 60)
+    {
+        System.out.println("Allowed");
+    }
+}
+Switch Statement
+
+Switch is used to execute one block from multiple choices.
+
+Syntax:
+
+switch(expression)
+{
+case value:
+statements;
+break;
+
+default:
+statements;
+}
+
+Example:
+
+int day = 2;
+
+switch(day)
+{
+case 1:
+    System.out.println("Monday");
+    break;
+
+case 2:
+    System.out.println("Tuesday");
+    break;
+
+default:
+    System.out.println("Invalid");
+}
+2. Looping Statements
+
+Loops are used to execute a block of code repeatedly.
+
+Types:
+
+for loop
+while loop
+do-while loop
+for Loop
+
+Used when the number of iterations is known.
+
+Syntax:
+
+for(initialization; condition; increment)
+{
+
+}
+
+Example:
+
+for(int i=1; i<=5; i++)
+{
+    System.out.println(i);
+}
+while Loop
+
+Executes statements while the condition is true.
+
+Syntax:
+
+while(condition)
+{
+
+}
+
+Example:
+
+int i = 1;
+
+while(i <= 5)
+{
+    System.out.println(i);
+    i++;
+}
+do-while Loop
+
+Executes the block at least once before checking the condition.
+
+Syntax:
+
+do
+{
+
+}
+while(condition);
+
+Example:
+
+int i = 1;
+
+do
+{
+    System.out.println(i);
+    i++;
+}
+while(i<=5);
+Difference between while and do-while
+
+while:
+
+Condition is checked first
+May execute zero times
+
+do-while:
+
+Executes first then checks condition
+Executes at least once
+3. Jump Statements
+
+Jump statements transfer control from one place to another.
+
+Types:
+
+break
+continue
+return
+break Statement
+
+Used to terminate a loop immediately.
+
+Example:
+
+for(int i=1;i<=5;i++)
+{
+    if(i==3)
+    {
+        break;
+    }
+
+    System.out.println(i);
+}
+
+Output:
+
+1
+2
+
+continue Statement
+
+Skips the current iteration and moves to the next iteration.
+
+Example:
+
+for(int i=1;i<=5;i++)
+{
+    if(i==3)
+    {
+        continue;
+    }
+
+    System.out.println(i);
+}
+
+Output:
+
+1
+2
+4
+5
+
+return Statement
+
+Used to return a value from a method or stop method execution.
+
+Example:
+
+return;
+
+
+# Advantages of Control Structures
+
+- Controls program execution
+- Reduces code complexity
+- Helps in decision making
+- Helps in repeating tasks
+- Improves program readability
