@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class day2
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a value:\n");
+        int a=sc.nextInt();
+        System.out.println("enter b value:\n");
+        int b=sc.nextInt();
+        boolean opposite=((a^b)<0);
+        System.out.println(opposite);
+    }
+}
+output:
+enter a value:8
+enter b value:9
+false
