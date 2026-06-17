@@ -1,3 +1,88 @@
+#1.Right Angle Triangle Pattern
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        for(int row = 1; row <= n; row++)
+        {
+            for(int col = 1; col <= row; col++)
+            {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+}
+output:
+*
+**
+***
+****
+*****
+
+#2. Inverted Right Half Pyramid Pattern
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        for(int i= 1;i<= n;i++)
+        {
+            for(int j= i; j <= n; j++)
+            {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+}
+Output: 5 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+#3.Inverted Left Half Pyramid Star Pattern
+public class GFG {
+
+    public static void main(String[] args) {
+    
+        int N = 5;
+
+        // Outer loop runs N times, once for each row
+        for (int i = 1; i <= N; i++) {
+            // Inner loop prints 'i - 1' spaces
+            for (int j = 1; j <= i - 1; j++) {
+                System.out.print("  ");
+            }
+
+            // Inner loop prints 'N - i + 1' stars
+            for (int j = 1; j <= N - i + 1; j++) {
+                System.out.print("*");
+            }
+
+
+            System.out.println();
+        }
+    }
+}
+Output:5
+*****
+  ****
+    ***
+      **
+        *
 import java.util.*;
 
 public class Main {
