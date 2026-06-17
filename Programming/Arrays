@@ -1,0 +1,265 @@
+1.Reverse an Array
+2.Find Largest Element
+3.Second Largest Element
+4.Two Sum
+5.Maximum Subarray Sum
+6.Move Zeroes
+7.Missing Number
+8.Rotate Array
+9.Remove Duplicates
+10.Merge Sorted Arrays
+
+###6.Move Zeros
+import java.util.*;
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+
+        int index = 0;
+
+        // Move non-zero elements to front
+        for(int i = 0; i < n; i++)
+        {
+            if(arr[i] != 0)
+            {
+                arr[index] = arr[i];
+                index++;
+            }
+        }
+
+        // Fill remaining positions with zero
+        while(index < n)
+        {
+            arr[index] = 0;
+            index++;
+        }
+
+        // Print array
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(arr[i] + " ");
+        }
+
+        sc.close();
+    }
+}
+
+###7. Missing Number in Array
+import java.util.*;
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+
+        int xor = n;
+
+        for(int i = 0; i < n; i++)
+        {
+            xor = xor ^ i;
+            xor = xor ^ arr[i];
+        }
+
+        System.out.println("Missing number is: " + xor);
+
+        sc.close();
+    }
+}
+
+
+
+###8.Right Rotation
+import java.util.*;
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+
+        int k = sc.nextInt();
+
+        k = k % n;
+
+        // Reverse complete array
+        reverse(arr, 0, n-1);
+
+        // Reverse first k elements
+        reverse(arr, 0, k-1);
+
+        // Reverse remaining elements
+        reverse(arr, k, n-1);
+
+
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(arr[i] + " ");
+        }
+
+        sc.close();
+    }
+
+
+    static void reverse(int arr[], int start, int end)
+    {
+        while(start < end)
+        {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++;
+            end--;
+        }
+    }
+}
+
+###9.Remove Duplicates from Sorted Array (Two Pointer)
+import java.util.*;
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+
+        int index = 1;
+
+        for(int i = 1; i < n; i++)
+        {
+            if(arr[i] != arr[index - 1])
+            {
+                arr[index] = arr[i];
+                index++;
+            }
+        }
+
+        System.out.println("After removing duplicates:");
+
+        for(int i = 0; i < index; i++)
+        {
+            System.out.print(arr[i] + " ");
+        }
+
+        sc.close();
+    }
+}
+
+###10. Merge Sorted Arrays
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int arr1[] = new int[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            arr1[i] = sc.nextInt();
+        }
+
+
+        int m = sc.nextInt();
+
+        int arr2[] = new int[m];
+
+        for(int i = 0; i < m; i++)
+        {
+            arr2[i] = sc.nextInt();
+        }
+
+
+        int merged[] = new int[n + m];
+
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+
+        while(i < n && j < m)
+        {
+            if(arr1[i] <= arr2[j])
+            {
+                merged[k] = arr1[i];
+                i++;
+            }
+            else
+            {
+                merged[k] = arr2[j];
+                j++;
+            }
+
+            k++;
+        }
+
+
+        while(i < n)
+        {
+            merged[k] = arr1[i];
+            i++;
+            k++;
+        }
+
+
+        while(j < m)
+        {
+            merged[k] = arr2[j];
+            j++;
+            k++;
+        }
+
+
+        System.out.println("Merged Array:");
+
+        for(int x : merged)
+        {
+            System.out.print(x + " ");
+        }
+
+        sc.close();
+    }
+}
