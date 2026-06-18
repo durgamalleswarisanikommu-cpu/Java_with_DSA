@@ -9,9 +9,90 @@
 9.Remove Duplicates
 10.Merge Sorted Arrays
 
-###6.Move Zeros
+
+###.Sorting of array
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+
+        for(int i = 0; i < n; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+
+
+        for(int i = 0; i < n-1; i++)
+        {
+            for(int j = 0; j < n-i-1; j++)
+            {
+                if(arr[j] > arr[j+1])
+                {
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+
+Using Java built-in function for sorting, use Arrays.sort().
+
+Java Program (Ascending Order)
 import java.util.*;
 
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+
+
+        // Built-in sorting method
+        Arrays.sort(arr);
+
+
+        // Print sorted array
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(arr[i] + " ");
+        }
+
+        sc.close();
+    }
+}
+
+For Descending Order:
+Integer arr[] = {5,3,8,1,2};
+
+Arrays.sort(arr, Collections.reverseOrder());
+
+System.out.println(Arrays.toString(arr));
+
+###6.Move Zeros
+import java.util.*;
 public class Main
 {
     public static void main(String args[])
@@ -144,7 +225,64 @@ public class Main
         }
     }
 }
+####.Left Rotation
+import java.util.*;
 
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+
+        int k = sc.nextInt();
+
+        k = k % n;
+
+
+        // Reverse first k elements
+        reverse(arr, 0, k-1);
+
+        // Reverse remaining elements
+        reverse(arr, k, n-1);
+
+        // Reverse complete array
+        reverse(arr, 0, n-1);
+
+
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print(arr[i] + " ");
+        }
+
+        sc.close();
+    }
+
+
+    static void reverse(int arr[], int start, int end)
+    {
+        while(start < end)
+        {
+            int temp = arr[start];
+
+            arr[start] = arr[end];
+
+            arr[end] = temp;
+
+
+            start++;
+            end--;
+        }
+    }
+}
 ###9.Remove Duplicates from Sorted Array (Two Pointer)
 import java.util.*;
 
