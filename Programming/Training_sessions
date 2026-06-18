@@ -727,3 +727,142 @@ public class Main {
         sc.close();
     }
 }
+
+#26.Buzz Number
+import java.util.*;
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int start = sc.nextInt();
+        int end = sc.nextInt();
+
+
+        for(int i = start; i <= end; i++)
+        {
+            if(i % 7 == 0 || i % 10 == 7)
+            {
+                System.out.print(i + " ");
+            }
+        }
+
+        sc.close();
+    }
+}
+#27.Binary Palindrome
+import java.util.*;
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int temp = n;
+        int binary = 0;
+        int place = 1;
+
+
+        // Convert decimal to binary number
+        while(temp > 0)
+        {
+            int digit = temp % 2;
+
+            binary = binary + digit * place;
+
+            place = place * 10;
+
+            temp = temp / 2;
+        }
+
+
+        int original = binary;
+        int reverse = 0;
+
+
+        // Reverse binary number
+        while(binary > 0)
+        {
+            int digit = binary % 10;
+
+            reverse = reverse * 10 + digit;
+
+            binary = binary / 10;
+        }
+
+
+        if(original == reverse)
+        {
+            System.out.println("Binary Palindrome");
+        }
+        else
+        {
+            System.out.println("Not Binary Palindrome");
+        }
+
+
+        sc.close();
+    }
+}
+
+#28.Check whether a number is a power of 2 using XOR operator
+
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+
+        if(n > 0 && (n ^ (n-1)) == (2*n - 1))
+        {
+            System.out.println("Power of 2");
+        }
+        else
+        {
+            System.out.println("Not Power of 2");
+        }
+
+
+        sc.close();
+    }
+}
+
+#29.Tribonacci series
+import java.util.*;
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int a = 0;
+        int b = 0;
+        int c = 1;
+
+
+        for(int i = 1; i <= n; i++)
+        {
+            System.out.print(a + " ");
+
+            int next = a + b + c;
+
+            a = b;
+            b = c;
+            c = next;
+        }
+
+        sc.close();
+    }
+}
