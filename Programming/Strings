@@ -1,0 +1,147 @@
+###1. prints each character of a String one by one
+import java.util.*;
+class basic
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        for(int i=0;i<str.length();i++)
+        {
+            System.out.println(str.charAt(i));
+        }
+    }
+}
+###2.Count letters of a String in Java
+
+import java.util.*;
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+
+        int count = 0;
+
+        for(int i = 0; i < str.length(); i++)
+        {
+            char ch = str.charAt(i);
+
+            if(Character.isLetter(ch))
+            {
+                count++;
+            }
+        }
+Input:Java123
+Output:Number of letters: 4
+        System.out.println("Number of letters: " + count);
+    }
+}
+
+###3.Slicing a String without using substring() method in Java
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String str ="My class room of the cse and it students are very good people";
+
+        int start = 6;
+        int end = 12;
+
+        String result = "";
+
+        for(int i = start; i < end; i++)
+        {
+            result = result + str.charAt(i);
+        }
+
+        System.out.println(result);
+    }
+}
+
+###4.Using In-Built function
+import java.util.*;
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+        String str=sc.nextLine();
+        
+        int start = 6;
+        int end = 12;
+        System.out.println(str.substring(1,10));
+    }
+}
+Input: Lakireddy bali reddy college(LBRCE)
+output: akireddy 
+
+###5.Reverse a string
+
+import java.util.*;
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+
+        String rev = "";
+
+        for(int i = str.length()-1; i >= 0; i--)
+        {
+            rev = rev + str.charAt(i);
+        }
+
+        System.out.println("Reverse: " + rev);
+    }
+}
+
+Reverse a character:
+class Solution {
+    public void reverseString(char[] s) {
+
+        int left = 0;
+        int right = s.length - 1;
+
+        while(left < right)
+        {
+            char temp = s[left];
+            s[left] = s[right];
+            s[right] = temp;
+
+            left++;
+            right--;
+        }
+    }
+}
+##.6.Palindrome String in Java
+
+import java.util.*;
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+
+        String rev = "";
+
+        for(int i = str.length()-1; i >= 0; i--)
+        {
+            rev = rev + str.charAt(i);
+        }
+
+        if(str.equals(rev))
+        {
+            System.out.println("Palindrome");
+        }
+        else
+        {
+            System.out.println("Not Palindrome");
+        }
+    }
+}
