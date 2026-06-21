@@ -219,3 +219,186 @@ class Solution {
 }
 Input : pwwkew
 Output: 3
+
+###9.Convert Uppercase to Lowercase and Lowercase to Uppercase
+import java.util.*;
+
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+
+        String result = "";
+
+
+        for(int i = 0; i < str.length(); i++)
+        {
+            char ch = str.charAt(i);
+
+
+            if(ch >= 'A' && ch <= 'Z')
+            {
+                result = result + (char)(ch + 32);
+            }
+            else if(ch >= 'a' && ch <= 'z')
+            {
+                result = result + (char)(ch - 32);
+            }
+            else
+            {
+                result = result + ch;
+            }
+        }
+
+
+        System.out.println(result);
+
+        sc.close();
+    }
+}
+
+###.Count Words in a Sentence
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        int count = 0;
+        for(int i = 0; i < str.length(); i++)
+        {
+            if(str.charAt(i) == ' ')
+            {
+                count++;
+            }
+        }
+        // words = spaces + 1
+        count = count + 1;
+        System.out.println("Words = " + count);
+        sc.close();
+    }
+}
+
+###.Anagram
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        String s1 = "listen";
+        String s2 = "silent";
+
+
+        char a[] = s1.toCharArray();
+        char b[] = s2.toCharArray();
+
+
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+
+        if(Arrays.equals(a,b))
+        {
+            System.out.println("Anagram");
+        }
+        else
+        {
+            System.out.println("Not Anagram");
+        }
+    }
+}
+(or)
+import java.util.*;
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
+
+
+        if(s1.length() != s2.length())
+        {
+            System.out.println("Not Anagram");
+            return;
+        }
+
+
+        int freq[] = new int[26];
+
+
+        for(int i = 0; i < s1.length(); i++)
+        {
+            freq[s1.charAt(i) - 'a']++;
+            freq[s2.charAt(i) - 'a']--;
+        }
+
+
+        boolean flag = true;
+
+
+        for(int i = 0; i < 26; i++)
+        {
+            if(freq[i] != 0)
+            {
+                flag = false;
+                break;
+            }
+        }
+
+
+        if(flag)
+        {
+            System.out.println("Anagram");
+        }
+        else
+        {
+            System.out.println("Not Anagram");
+        }
+
+
+        sc.close();
+    }
+}
+
+###.Frequency Count
+import java.util.*;
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+
+        int freq[] = new int[26];
+
+
+        for(int i = 0; i < str.length(); i++)
+        {
+            char ch = str.charAt(i);
+
+            freq[ch - 'a']++;
+        }
+
+
+        for(int i = 0; i < 26; i++)
+        {
+            if(freq[i] > 0)
+            {
+                System.out.println((char)(i + 'a') + " = " + freq[i]);
+            }
+        }
+
+
+        sc.close();
+    }
+}
