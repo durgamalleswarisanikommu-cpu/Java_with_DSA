@@ -421,3 +421,38 @@ class Main {
         System.out.println(result);
     }
 }
+
+###.Remove Duplicates from String
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+
+        String res = "";
+
+        for(int i = 0; i < str.length(); i++)
+        {
+            boolean found = false;
+
+            for(int j = 0; j < res.length(); j++)
+            {
+                if(str.charAt(i) == res.charAt(j))
+                {
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found)
+            {
+                res = res + str.charAt(i);
+            }
+        }
+
+        System.out.println(res);
+    }
+}
