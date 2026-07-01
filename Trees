@@ -1,0 +1,33 @@
+###.Valid Binary Search Tree
+class Solution {
+    public boolean isValidBST(TreeNode root) {
+        if(root == null) return true;
+        if(root.left == null && root.right == null) return true;
+        return isValidBSTHelper(root,Long.MIN_VALUE,Long.MAX_VALUE);
+        
+    }
+
+    public boolean isValidBSTHelper(TreeNode node,long minimum,long maximum)
+    {
+        if(node == null) return true;
+        if(node.val >= maximum) return false;
+        if(node.val <= minimum) return false;
+        boolean left = isValidBSTHelper(node.left,minimum,node.val);
+        boolean right = isValidBSTHelper(node.right,node.val,maximum);
+        return left && right;
+    }
+}
+
+###2. Lowest Common Ancestor of a Binary Tree
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if(root == null) return root;
+        if(root == p || root == q) return root;
+        if(root.left == p && root.right == q) return root;
+        TreeNode left = lowestCommonAncestor(root.left,p,q);
+        TreeNode right = lowestCommonAncestor(root.right,p,q);
+        if(left != null && right != null) return root;
+        return (left != null)? left : right;
+        
+    }
+}
